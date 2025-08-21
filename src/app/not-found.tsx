@@ -9,7 +9,7 @@ const NotFound = () => {
           Page not found
         </h1>
         <p className="text-ink-3 mb-6">
-          The page you're looking for doesn't exist or may have moved.
+          The page you are looking for does not exist or may have moved.
         </p>
         <div className="flex items-center justify-center gap-3">
           <LinkButton href="/">Go Home</LinkButton>
