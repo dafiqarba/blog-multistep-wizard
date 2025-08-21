@@ -1,0 +1,42 @@
+@import 'tailwindcss';
+
+:root {
+  --brand-50: #f9f6f2; /* porcelain */
+  --brand-100: #f4ece2; /* cream tint  */
+  --brand-200: #d6c3ae; /* sand */
+  --brand-400: #c2ab93; /* tan */
+  --brand-500: #a78b71; /* pastel brown (primary) */
+  --brand-600: #8d735a; /* deeper brown (hover) */
+  --brand-700: #6b4f3b; /* espresso (text on light) */
+  --brand-800: #4a3528; /* deep espresso */
+  --brand-900: #2e2119; /* near-black brown */
+
+  --text-ink-1: #0b0b0a; /* primary text on light */
+  --text-ink-2: #252421; /* secondary text */
+  --text-ink-3: #3c3a36; /* muted text */
+}
+
+@theme inline {
+
+  --color-brand-50: var(--brand-50);
+  --color-brand-100: var(--brand-100);
+  --color-brand-200: var(--brand-200);
+  --color-brand-300: var(--brand-300);
+  --color-brand-400: var(--brand-400);
+  --color-brand-500: var(--brand-500);
+  --color-brand-600: var(--brand-600);
+  --color-brand-700: var(--brand-700);
+  --color-brand-800: var(--brand-800);
+  --color-brand-900: var(--brand-900);
+  --color-text-ink-1: var(--text-ink-1);
+  --color-text-ink-2: var(--text-ink-2);
+  --color-text-ink-3: var(--text-ink-3);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--brand-100);
+  color: var(--text-ink-1) antialiased;
+}
