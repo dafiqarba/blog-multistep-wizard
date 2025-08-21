@@ -1,36 +1,42 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Blog Multistep Wizard
+
+A clean, simple blog app built with the Next.js **App Router**. Create posts through a **4-step wizard** (Metadata → Summary/Category → Content → Review), then see them on the homepage. Data is stored locally via `localStorage`.
+
+## Live Demo
+[Blog Multistep Wizard](https://blog-multistep-wizard.vercel.app?_vercel_share=h4KYlvWrLHFZTZtjAqklJnkb2XlSqHhg)
+
+## Features
+- Multi-step create wizard with **inline validation** (on next-attempt) and a **sectioned Review** step with “Edit” jump-backs.
+- Pastel-brown Tailwind theme; **DRY UI implementation**.
+- Homepage list (cards) → **View Details** page.
+- **Global 404** (`app/not-found.tsx`).
+- Client-side persistence (no backend): posts saved in `localStorage`.
+
+## Stack
+- Next.js (App Router) + TypeScript
+- Tailwind CSS
+- Local state/context providers
 
 ## Getting Started
-
-First, run the development server:
-
 ```bash
+# Install
+npm i
+
+# Dev
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# http://localhost:3000
+
+# Build & run
+npm run build
+npm run start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Useful Paths
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- `app/page.tsx` - homepage
+- `app/new-post.tsx` - multi-step wizard page
+- `app/blog/[id]/page.tsx` - post detail page
+- `app/not-found.tsx` - global 404
+- `components/ui*` - reusable UI
+- `context/*` - BlogProvider, MultiStepProvider
+- `utils/*` - Function helpers
